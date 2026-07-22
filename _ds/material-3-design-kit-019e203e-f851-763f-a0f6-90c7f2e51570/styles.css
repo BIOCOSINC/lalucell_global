@@ -1,0 +1,8 @@
+@import './tokens/fig-tokens.css';
+@import './tokens/fonts.css';
+@import './tokens/elevation.css';
+@import './tokens/semantic.css';
+@import './tokens/fig-typography.css';
+body{font-family:var(--font-plain);color:var(--on-surface);background:var(--surface)}
+a{color:var(--primary)}
+a:hover{color:var(--schemes-on-primary-fixed-variant,var(--primary))}

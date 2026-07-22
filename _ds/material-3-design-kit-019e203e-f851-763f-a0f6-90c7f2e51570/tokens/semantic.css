@@ -1,0 +1,12 @@
+:root{
+--text-display-large:var(--font-brand);--text-display-large-size:calc(var(--static-display-large-size)*1px);--text-display-large-line:calc(var(--static-display-large-line-height)*1px);--text-display-large-tracking:calc(var(--static-display-large-tracking)*1px);
+--radius-xs:calc(var(--corner-extra-small)*1px);--radius-sm:calc(var(--corner-small)*1px);--radius-md:calc(var(--corner-medium)*1px);--radius-lg:calc(var(--corner-large)*1px);--radius-lg-inc:calc(var(--corner-large-increased)*1px);--radius-xl:calc(var(--corner-extra-large)*1px);--radius-xl-inc:calc(var(--corner-extra-large-increased)*1px);--radius-xxl:calc(var(--corner-extra-extra-large)*1px);--radius-full:calc(var(--corner-full)*1px);--radius-none:0px;
+--surface:var(--schemes-surface);--surface-dim:var(--schemes-surface-dim);--surface-bright:var(--schemes-surface-bright);--surface-container-lowest:var(--schemes-surface-container-lowest);--surface-container-low:var(--schemes-surface-container-low);--surface-container:var(--schemes-surface-container);--surface-container-high:var(--schemes-surface-container-high);--surface-container-highest:var(--schemes-surface-container-highest);
+--on-surface:var(--schemes-on-surface);--on-surface-variant:var(--schemes-on-surface-variant);--outline:var(--schemes-outline);--outline-variant:var(--schemes-outline-variant);
+--primary:var(--schemes-primary);--on-primary:var(--schemes-on-primary);--primary-container:var(--schemes-primary-container);--on-primary-container:var(--schemes-on-primary-container);
+--secondary:var(--schemes-secondary);--on-secondary:var(--schemes-on-secondary);--secondary-container:var(--schemes-secondary-container);--on-secondary-container:var(--schemes-on-secondary-container);
+--tertiary:var(--schemes-tertiary);--on-tertiary:var(--schemes-on-tertiary);--tertiary-container:var(--schemes-tertiary-container);--on-tertiary-container:var(--schemes-on-tertiary-container);
+--error:var(--schemes-error);--on-error:var(--schemes-on-error);--error-container:var(--schemes-error-container);--on-error-container:var(--schemes-on-error-container);
+--inverse-surface:var(--schemes-inverse-surface);--inverse-on-surface:var(--schemes-inverse-on-surface);--inverse-primary:var(--schemes-inverse-primary);--scrim:var(--schemes-scrim);--shadow:var(--schemes-shadow);
+--sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;--sp-10:40px;--sp-12:48px
+}

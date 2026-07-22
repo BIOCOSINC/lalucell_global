@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/fig-tokens.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/elevation.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/semantic.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/fig-typography.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/styles.css">
+  <script src="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;overflow-x:hidden}
+    a{color:#C9A227}
+    a:hover{color:#B08D1F}
+  
+    @media (max-width:768px){
+      .mq-topbar{flex-wrap:wrap !important;row-gap:10px !important}
+      .mq-navlinks{order:3 !important;width:100% !important;flex-wrap:wrap !important;overflow:visible !important;justify-content:center !important;gap:10px 16px !important}
+      .mq-grid{grid-template-columns:1fr !important}
+      .mq-pad{padding-left:20px !important;padding-right:20px !important}
+      .mq-cta{flex-direction:column !important;align-items:flex-start !important;gap:16px !important}
+      .mq-cta > a, .mq-cta > div{width:100% !important;justify-content:center !important}
+      .mq-hero-copy h1{font-size:32px !important}
+      .mq-formgrid{grid-template-columns:1fr !important}
+    }
+  </style>
+</helmet>
+
+<div style="font-family:'Pretendard Variable','Roboto',sans-serif;background:#F7F5F0;color:#12231E">
+
+  <div class="mq-topbar" style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 32px;background:#004638;position:sticky;top:0;z-index:10">
+    <a href="Home%20Wireframe.dc.html" style="flex:0 0 auto;line-height:0"><img src="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/assets/brand/lalucell-lockup.png" alt="LALUCELL" style="height:28px;filter:brightness(0) invert(1)"/></a>
+    <div class="mq-navlinks" style="display:flex;gap:14px;align-items:center;min-width:0;flex:1 1 auto;flex-wrap:nowrap;overflow:hidden">
+      <a href="About%20Us%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">About Us</a>
+      <span style="font-size:12px;color:#fff;font-weight:600;white-space:nowrap">Brand Story</span>
+      <a href="Technology%20Patents%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Technology</a>
+      <a href="Products%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Products</a>
+      <a href="Certifications%20Awards%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Certifications</a>
+      <a href="Global%20Export%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Export</a>
+      <a href="Buyer%20Inquiry%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Contact</a>
+    </div>
+    <div style="display:flex;flex:0 0 auto;border:1px solid #C9A227;border-radius:100px;overflow:hidden">
+      <div style="padding:6px 14px;font-size:13px;font-weight:600;background:#C9A227;color:#004638;white-space:nowrap">KO</div>
+      <div style="padding:6px 14px;font-size:13px;font-weight:600;color:#C9A227;white-space:nowrap">EN</div>
+    </div>
+  </div>
+
+  <div class="mq-pad" style="padding:72px 48px 56px;background:#004638;color:#fff">
+    <span style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#C9A227;font-weight:600">Brand Story</span>
+    <h1 style="font-size:40px;font-weight:500;margin:12px 0 0">Balanced Aging Philosophy</h1>
+    <p style="font-size:16px;line-height:1.6;color:#C9D6D0;max-width:680px;margin:16px 0 0">LALUCELL believes aging well is about balance, not resistance — pairing plant-derived ingredients with clinically proven, patented science so skin stays healthy at every stage of life.</p>
+  </div>
+
+  <div class="mq-grid mq-pad" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;padding:64px 48px;background:#fff">
+    <image-slot id="story-visual" shape="rounded" radius="16" placeholder="Brand philosophy visual" style="width:100%;height:340px"></image-slot>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <h2 style="font-size:26px;font-weight:500;color:#004638;margin:0">Balanced Aging Solution</h2>
+      <p style="font-size:15px;line-height:1.75;color:#3A4A45;margin:0">Rather than chasing an artificial standard of youth, LALUCELL formulates for equilibrium — barrier health, hydration, and resilience — so results are visible without compromising skin safety. This philosophy shapes every product line, from pregnancy-safe essentials to advanced anti-aging serums, and is backed by clinical testing at each stage of development.</p>
+    </div>
+  </div>
+
+  <div class="mq-pad" style="padding:64px 48px;background:#F7F5F0">
+    <h2 style="font-size:26px;font-weight:500;color:#004638;margin:0 0 8px;text-align:center">Four Core Values</h2>
+    <p style="font-size:14px;color:#6B7A76;margin:0 0 40px;text-align:center">The principles behind every LALUCELL formulation</p>
+    <div class="mq-grid" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+      <div style="background:#fff;border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;gap:12px;min-width:0;border-top:3px solid #C9A227">
+        <span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#C9A227">01</span>
+        <span style="font-size:17px;font-weight:600;color:#004638">NATURE</span>
+        <span style="font-size:13px;color:#3A4A45;line-height:1.6">Plant-derived actives and fermentation ingredients sourced with skin-barrier compatibility in mind.</span>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;gap:12px;min-width:0;border-top:3px solid #C9A227">
+        <span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#C9A227">02</span>
+        <span style="font-size:17px;font-weight:600;color:#004638">SAFETY</span>
+        <span style="font-size:13px;color:#3A4A45;line-height:1.6">Low-irritation formulation standards, validated for use across sensitive-skin and pregnancy-safe categories.</span>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;gap:12px;min-width:0;border-top:3px solid #C9A227">
+        <span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#C9A227">03</span>
+        <span style="font-size:17px;font-weight:600;color:#004638">SCIENCE FORMULA</span>
+        <span style="font-size:13px;color:#3A4A45;line-height:1.6">Proprietary, patented technologies (TRX Advance™, ELASOME®, E.Beam, TARAX III®) engineered in-house.</span>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;gap:12px;min-width:0;border-top:3px solid #C9A227">
+        <span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#C9A227">04</span>
+        <span style="font-size:17px;font-weight:600;color:#004638">HIGH PERFORMANCE</span>
+        <span style="font-size:13px;color:#3A4A45;line-height:1.6">Every claim is backed by clinical measurement — visible, quantified results across the lineup.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mq-cta mq-pad" style="display:flex;align-items:center;justify-content:space-between;padding:40px 48px;background:#004638;color:#fff">
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <span style="font-size:22px;font-weight:500">Become Our Partner</span>
+      <span style="font-size:14px;color:#C9D6D0">바이어 문의하기 — Import, distribution &amp; OEM/ODM inquiries welcome</span>
+    </div>
+    <a href="Buyer%20Inquiry%20Wireframe.dc.html" style="height:52px;padding:0 32px;border-radius:100px;background:#C9A227;color:#004638;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;flex:0 0 auto;text-decoration:none">Contact Us</a>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

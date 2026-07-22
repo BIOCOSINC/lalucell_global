@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/fig-tokens.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/elevation.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/semantic.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/tokens/fig-typography.css">
+  <link rel="stylesheet" href="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/styles.css">
+  <script src="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;overflow-x:hidden}
+    a{color:#C9A227}
+    a:hover{color:#B08D1F}
+  
+    @media (max-width:768px){
+      .mq-topbar{flex-wrap:wrap !important;row-gap:10px !important}
+      .mq-navlinks{order:3 !important;width:100% !important;flex-wrap:wrap !important;overflow:visible !important;justify-content:center !important;gap:10px 16px !important}
+      .mq-grid{grid-template-columns:1fr !important}
+      .mq-pad{padding-left:20px !important;padding-right:20px !important}
+      .mq-cta{flex-direction:column !important;align-items:flex-start !important;gap:16px !important}
+      .mq-cta > a, .mq-cta > div{width:100% !important;justify-content:center !important}
+      .mq-hero-copy h1{font-size:32px !important}
+      .mq-formgrid{grid-template-columns:1fr !important}
+    }
+  </style>
+</helmet>
+
+<div style="font-family:'Pretendard Variable','Roboto',sans-serif;background:#F7F5F0;color:#12231E">
+
+  <div class="mq-topbar" style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 32px;background:#004638;position:sticky;top:0;z-index:10">
+    <a href="Home%20Wireframe.dc.html" style="flex:0 0 auto;line-height:0"><img src="_ds/material-3-design-kit-019e203e-f851-763f-a0f6-90c7f2e51570/assets/brand/lalucell-lockup.png" alt="LALUCELL" style="height:28px;filter:brightness(0) invert(1)"/></a>
+    <div class="mq-navlinks" style="display:flex;gap:14px;align-items:center;min-width:0;flex:1 1 auto;flex-wrap:nowrap;overflow:hidden">
+      <a href="About%20Us%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">About Us</a>
+      <a href="Brand%20Story%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Brand Story</a>
+      <a href="Technology%20Patents%20Wireframe.dc.html" style="font-size:12px;color:#fff;font-weight:600;white-space:nowrap;text-decoration:none">Technology</a>
+      <a href="Products%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Products</a>
+      <a href="Certifications%20Awards%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Certifications</a>
+      <a href="Global%20Export%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Export</a>
+      <a href="Buyer%20Inquiry%20Wireframe.dc.html" style="font-size:12px;color:#E7E9EE;font-weight:400;white-space:nowrap;text-decoration:none">Contact</a>
+    </div>
+    <div style="display:flex;flex:0 0 auto;border:1px solid #C9A227;border-radius:100px;overflow:hidden">
+      <div style="padding:6px 14px;font-size:13px;font-weight:600;background:#C9A227;color:#004638;white-space:nowrap">KO</div>
+      <div style="padding:6px 14px;font-size:13px;font-weight:600;color:#C9A227;white-space:nowrap">EN</div>
+    </div>
+  </div>
+
+  <div class="mq-pad" style="padding:72px 48px 56px;background:#004638;color:#fff">
+    <span style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#C9A227;font-weight:600">Technology &amp; Patents</span>
+    <h1 style="font-size:40px;font-weight:500;margin:12px 0 0">4 Patented Technologies</h1>
+    <p style="font-size:16px;line-height:1.6;color:#C9D6D0;max-width:640px;margin:16px 0 0">Proprietary formulation science behind LALUCELL's balanced-aging results, each backed by Korean patent registration and clinical data.</p>
+  </div>
+
+  <div class="mq-pad" style="display:flex;flex-direction:column;gap:24px;padding:56px 48px;background:#fff">
+
+    <div style="display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:0;background:#F7F5F0;border-radius:12px;overflow:hidden">
+      <image-slot id="tech-trx" shape="rect" placeholder="TRX Advance™" style="width:100%;height:260px"></image-slot>
+      <div style="padding:32px;display:flex;flex-direction:column;gap:10px;min-width:0">
+        <span style="font-size:12px;color:#C9A227;font-weight:700;letter-spacing:.5px">PATENT NO. 10-2737614</span>
+        <span style="font-size:22px;font-weight:600;color:#004638">TRX Advance™</span>
+        <span style="font-size:14px;color:#3A4A45;line-height:1.6">Core balanced-aging complex used at 68% concentration in the flagship facial cream. Clinically shown to reduce apparent skin age and improve firmness in an 11-item clinical panel.</span>
+        <span style="font-size:13px;color:#004638;font-weight:600;margin-top:4px">Skin age -7yrs · Wrinkles -40.3% · Elasticity +17.0% · Hydration density +77.9%</span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:0;background:#F7F5F0;border-radius:12px;overflow:hidden">
+      <div style="padding:32px;display:flex;flex-direction:column;gap:10px;min-width:0;order:1">
+        <span style="font-size:12px;color:#C9A227;font-weight:700;letter-spacing:.5px">PATENT NO. 10-1796822</span>
+        <span style="font-size:22px;font-weight:600;color:#004638">ELASOME®</span>
+        <span style="font-size:14px;color:#3A4A45;line-height:1.6">Elastic-vesicle delivery technology developed to carry active ingredients deeper into the skin barrier, improving absorption and efficacy of high-molecular actives.</span>
+        <span style="font-size:13px;color:#004638;font-weight:600;margin-top:4px">Enhanced ingredient delivery &amp; barrier compatibility</span>
+      </div>
+      <image-slot id="tech-elasome" shape="rect" placeholder="ELASOME®" style="width:100%;height:260px;order:2"></image-slot>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:0;background:#F7F5F0;border-radius:12px;overflow:hidden">
+      <image-slot id="tech-ebeam" shape="rect" placeholder="E.Beam" style="width:100%;height:260px"></image-slot>
+      <div style="padding:32px;display:flex;flex-direction:column;gap:10px;min-width:0">
+        <span style="font-size:12px;color:#C9A227;font-weight:700;letter-spacing:.5px">PATENT NO. 10-2466953</span>
+        <span style="font-size:22px;font-weight:600;color:#004638">E.Beam</span>
+        <span style="font-size:14px;color:#3A4A45;line-height:1.6">Electron-beam hydrogel formulation used in adhesive-free stretch-mark patches and cooling chest patches — no chemical crosslinkers.</span>
+        <span style="font-size:13px;color:#004638;font-weight:600;margin-top:4px">Itching -53% · Hydration +33% · Elasticity +9.4% · Density +14%</span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:0;background:#F7F5F0;border-radius:12px;overflow:hidden">
+      <div style="padding:32px;display:flex;flex-direction:column;gap:10px;min-width:0;order:1">
+        <span style="font-size:12px;color:#C9A227;font-weight:700;letter-spacing:.5px">PATENT NO. 10-2534261</span>
+        <span style="font-size:22px;font-weight:600;color:#004638">TARAX III®</span>
+        <span style="font-size:14px;color:#3A4A45;line-height:1.6">Dandelion-derived active paired with shea butter to relieve stretch-mark discomfort and improve tone and density in body care formulations.</span>
+        <span style="font-size:13px;color:#004638;font-weight:600;margin-top:4px">Itching -63% · Tone +2.4% · Hydration +32% · Density +13%</span>
+      </div>
+      <image-slot id="tech-tarax" shape="rect" placeholder="TARAX III®" style="width:100%;height:260px;order:2"></image-slot>
+    </div>
+
+  </div>
+
+  <div class="mq-cta mq-pad" style="display:flex;align-items:center;justify-content:space-between;padding:40px 48px;background:#004638;color:#fff">
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <span style="font-size:22px;font-weight:500">Become Our Partner</span>
+      <span style="font-size:14px;color:#C9D6D0">바이어 문의하기 — Import, distribution &amp; OEM/ODM inquiries welcome</span>
+    </div>
+    <a href="Buyer%20Inquiry%20Wireframe.dc.html" style="height:52px;padding:0 32px;border-radius:100px;background:#C9A227;color:#004638;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;flex:0 0 auto;text-decoration:none">Contact Us</a>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

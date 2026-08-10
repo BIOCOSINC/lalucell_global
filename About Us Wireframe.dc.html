@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     const manifest = JSON.parse(manifestEl.textContent);
     const sharedEl = document.querySelector('script[type="__bundler/shared_resources"]');
     const sharedResources = sharedEl ? JSON.parse(sharedEl.textContent) : {};
+    const deferredEl = document.querySelector('script[type="__bundler/deferred_images"]');
+    const deferredMap = deferredEl ? JSON.parse(deferredEl.textContent) : {};
     let template = JSON.parse(templateEl.textContent);
 
     // Nested page bundles (iframe targets). Each ships ONCE, in the ROOT
@@ -212,7 +214,7 @@ document.addEventListener('DOMContentLoaded', async function() {
       }
     });
 
-    const uuids = Object.keys(manifest).concat(Object.keys(sharedResources));
+    const uuids = Object.keys(manifest).concat(Object.keys(sharedResources)).filter((u) => !deferredMap[u]);
     setStatus('Unpacking ' + uuids.length + ' assets...');
 
     await Promise.all(uuids.map(async (uuid) => {
@@ -312,6 +314,50 @@ document.addEventListener('DOMContentLoaded', async function() {
     // preserve ordering (React before ReactDOM before Babel before text/babel).
     const doc = new DOMParser().parseFromString(template, 'text/html');
     document.documentElement.replaceWith(doc.documentElement);
+    // Deferred images (see __bundler/deferred_images): decoded off the
+    // critical path so a page with a large below-the-fold image grid
+    // doesn't make every visitor wait on all of it before anything paints.
+    // Left un-substituted in the template, these slots render in their
+    // native empty/placeholder state until this fills them in.
+    if (Object.keys(deferredMap).length) {
+      const runDeferred = () => {
+        Object.keys(deferredMap).forEach((uuid) => {
+          const entry = manifest[uuid];
+          const el = document.getElementById(deferredMap[uuid]);
+          if (!entry || !el) return;
+          try {
+            const binaryStr = atob(entry.data);
+            const bytes = new Uint8Array(binaryStr.length);
+            for (let i = 0; i < binaryStr.length; i++) bytes[i] = binaryStr.charCodeAt(i);
+            const finish = (finalBytes) => {
+              const blob = new Blob([finalBytes], { type: entry.mime });
+              el.setAttribute('src', URL.createObjectURL(blob));
+            };
+            if (entry.compressed && typeof DecompressionStream !== 'undefined') {
+              const ds = new DecompressionStream('gzip');
+              const writer = ds.writable.getWriter();
+              writer.write(bytes);
+              writer.close();
+              new Response(ds.readable).arrayBuffer().then((buf) => finish(new Uint8Array(buf)));
+            } else {
+              finish(bytes);
+            }
+          } catch (e) { console.warn('[bundle] deferred image failed:', uuid, e); }
+        });
+      };
+      // The template's {{ }}/sc-for bindings (incl. these image-slot ids)
+      // are hydrated by the page's own component script, which runs async
+      // after this swap — poll briefly for the first id rather than assume
+      // it's already mounted.
+      const __deferredFirstId = Object.values(deferredMap)[0];
+      let __deferredAttempts = 0;
+      const waitForMount = () => {
+        if (document.getElementById(__deferredFirstId) || __deferredAttempts++ > 100) { runDeferred(); return; }
+        setTimeout(waitForMount, 50);
+      };
+      setTimeout(waitForMount, 0);
+    }
+
 
     // Resolve page-frame markers: mint this document's own blob for each
     // framed page — from local text when this is the root, otherwise by
